@@ -75,39 +75,53 @@ jsonSource_cose_4.addFeatures(features_cose_4);var lyr_cose_4 = new ol.layer.Vec
                 source:jsonSource_cose_4, 
                 style: style_cose_4,
                 title: '<img src="styles/legend/cose_4.png" /> cose'
-            });var format_disponibles_5 = new ol.format.GeoJSON();
-var features_disponibles_5 = format_disponibles_5.readFeatures(json_disponibles_5, 
+            });var format_cablePOL_5 = new ol.format.GeoJSON();
+var features_cablePOL_5 = format_cablePOL_5.readFeatures(json_cablePOL_5, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_disponibles_5 = new ol.source.Vector({
+var jsonSource_cablePOL_5 = new ol.source.Vector({
     attributions: [new ol.Attribution({html: '<a href=""></a>'})],
 });
-jsonSource_disponibles_5.addFeatures(features_disponibles_5);var lyr_disponibles_5 = new ol.layer.Vector({
+jsonSource_cablePOL_5.addFeatures(features_cablePOL_5);var lyr_cablePOL_5 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_disponibles_5, 
-                style: style_disponibles_5,
-                title: '<img src="styles/legend/disponibles_5.png" /> disponibles'
+                source:jsonSource_cablePOL_5, 
+                style: style_cablePOL_5,
+                title: '<img src="styles/legend/cablePOL_5.png" /> cablePOL'
+            });var format_disponibles_6 = new ol.format.GeoJSON();
+var features_disponibles_6 = format_disponibles_6.readFeatures(json_disponibles_6, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_disponibles_6 = new ol.source.Vector({
+    attributions: [new ol.Attribution({html: '<a href=""></a>'})],
+});
+jsonSource_disponibles_6.addFeatures(features_disponibles_6);var lyr_disponibles_6 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_disponibles_6, 
+                style: style_disponibles_6,
+                title: '<img src="styles/legend/disponibles_6.png" /> disponibles'
             });
 
-lyr_parcelas_0.setVisible(true);lyr_FO_1.setVisible(true);lyr_empalmes_2.setVisible(true);lyr_CTO_3.setVisible(true);lyr_cose_4.setVisible(true);lyr_disponibles_5.setVisible(true);
-var layersList = [baseLayer,lyr_parcelas_0,lyr_FO_1,lyr_empalmes_2,lyr_CTO_3,lyr_cose_4,lyr_disponibles_5];
-lyr_parcelas_0.set('fieldAliases', {'FID': 'FID', });
+lyr_parcelas_0.setVisible(true);lyr_FO_1.setVisible(true);lyr_empalmes_2.setVisible(true);lyr_CTO_3.setVisible(true);lyr_cose_4.setVisible(true);lyr_cablePOL_5.setVisible(true);lyr_disponibles_6.setVisible(true);
+var layersList = [baseLayer,lyr_parcelas_0,lyr_FO_1,lyr_empalmes_2,lyr_CTO_3,lyr_cose_4,lyr_cablePOL_5,lyr_disponibles_6];
+lyr_parcelas_0.set('fieldAliases', {});
 lyr_FO_1.set('fieldAliases', {'id': 'id', 'nombre': 'nombre', 'fibras': 'fibras', 'dist': 'dist', 'troncal': 'troncal', 'longitud': 'longitud', });
 lyr_empalmes_2.set('fieldAliases', {'id': 'id', 'anota': 'anota', 'nombre': 'nombre', });
 lyr_CTO_3.set('fieldAliases', {'SP8': 'SP8', 'nombre': 'nombre', 'pedestal': 'pedestal', 'ZONA': 'ZONA', 'NUMPOINTS': 'NUMPOINTS', 'ley': 'ley', });
 lyr_cose_4.set('fieldAliases', {'id': 'id', 'long': 'long', 'nombre': 'nombre', 'fibras': 'fibras', 'dist': 'dist', 'troncal': 'troncal', });
-lyr_disponibles_5.set('fieldAliases', {'SP8': 'SP8', 'nombre': 'nombre', 'pedestal': 'pedestal', 'ZONA': 'ZONA', 'NUMPOINTS': 'NUMPOINTS', 'ley': 'ley', });
-lyr_parcelas_0.set('fieldImages', {'FID': 'TextEdit', });
+lyr_cablePOL_5.set('fieldAliases', {'id': 'id', 'long': 'long', 'nombre': 'nombre', 'fibras': 'fibras', 'dist': 'dist', 'troncal': 'troncal', });
+lyr_disponibles_6.set('fieldAliases', {'SP8': 'SP8', 'nombre': 'nombre', 'pedestal': 'pedestal', 'ZONA': 'ZONA', 'NUMPOINTS': 'NUMPOINTS', 'ley': 'ley', });
+lyr_parcelas_0.set('fieldImages', {});
 lyr_FO_1.set('fieldImages', {'id': 'TextEdit', 'nombre': 'TextEdit', 'fibras': 'TextEdit', 'dist': 'TextEdit', 'troncal': 'TextEdit', 'longitud': 'TextEdit', });
 lyr_empalmes_2.set('fieldImages', {'id': 'TextEdit', 'anota': 'TextEdit', 'nombre': 'TextEdit', });
 lyr_CTO_3.set('fieldImages', {'SP8': 'TextEdit', 'nombre': 'TextEdit', 'pedestal': 'TextEdit', 'ZONA': 'TextEdit', 'NUMPOINTS': 'TextEdit', 'ley': 'TextEdit', });
 lyr_cose_4.set('fieldImages', {'id': 'TextEdit', 'long': 'TextEdit', 'nombre': 'TextEdit', 'fibras': 'TextEdit', 'dist': 'TextEdit', 'troncal': 'TextEdit', });
-lyr_disponibles_5.set('fieldImages', {'SP8': 'TextEdit', 'nombre': 'TextEdit', 'pedestal': 'TextEdit', 'ZONA': 'TextEdit', 'NUMPOINTS': 'TextEdit', 'ley': 'TextEdit', });
-lyr_parcelas_0.set('fieldLabels', {'FID': 'no label', });
+lyr_cablePOL_5.set('fieldImages', {'id': 'TextEdit', 'long': 'TextEdit', 'nombre': 'TextEdit', 'fibras': 'TextEdit', 'dist': 'TextEdit', 'troncal': 'TextEdit', });
+lyr_disponibles_6.set('fieldImages', {'SP8': 'TextEdit', 'nombre': 'TextEdit', 'pedestal': 'TextEdit', 'ZONA': 'TextEdit', 'NUMPOINTS': 'TextEdit', 'ley': 'TextEdit', });
+lyr_parcelas_0.set('fieldLabels', {});
 lyr_FO_1.set('fieldLabels', {'id': 'no label', 'nombre': 'header label', 'fibras': 'inline label', 'dist': 'inline label', 'troncal': 'no label', 'longitud': 'no label', });
 lyr_empalmes_2.set('fieldLabels', {'id': 'no label', 'anota': 'no label', 'nombre': 'no label', });
 lyr_CTO_3.set('fieldLabels', {'SP8': 'header label', 'nombre': 'header label', 'pedestal': 'no label', 'ZONA': 'no label', 'NUMPOINTS': 'inline label', 'ley': 'no label', });
 lyr_cose_4.set('fieldLabels', {'id': 'no label', 'long': 'no label', 'nombre': 'no label', 'fibras': 'no label', 'dist': 'no label', 'troncal': 'no label', });
-lyr_disponibles_5.set('fieldLabels', {'SP8': 'no label', 'nombre': 'no label', 'pedestal': 'no label', 'ZONA': 'no label', 'NUMPOINTS': 'no label', 'ley': 'no label', });
-lyr_disponibles_5.on('precompose', function(evt) {
+lyr_cablePOL_5.set('fieldLabels', {'id': 'no label', 'long': 'no label', 'nombre': 'no label', 'fibras': 'no label', 'dist': 'no label', 'troncal': 'no label', });
+lyr_disponibles_6.set('fieldLabels', {'SP8': 'no label', 'nombre': 'no label', 'pedestal': 'no label', 'ZONA': 'no label', 'NUMPOINTS': 'no label', 'ley': 'no label', });
+lyr_disponibles_6.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
